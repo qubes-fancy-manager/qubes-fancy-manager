@@ -394,6 +394,7 @@ template</string>
     </widget>
     <addaction name="action_createvm"/>
     <addaction name="action_removevm"/>
+    <addaction name="action_create3rd"/>
     <addaction name="action_clonevm"/>
     <addaction name="separator"/>
     <addaction name="action_resumevm"/>
@@ -456,6 +457,8 @@ template</string>
    <addaction name="action_createvm"/>
    <addaction name="action_removevm"/>
    <addaction name="separator"/>
+   <addaction name="action_create3rd"/>
+   <addaction name="separator"/>
    <addaction name="action_resumevm"/>
    <addaction name="action_pausevm"/>
    <addaction name="action_shutdownvm"/>
@@ -498,6 +501,21 @@ template</string>
    </property>
    <property name="toolTip">
     <string>Remove an existing qube (must be shut down first)</string>
+   </property>
+  </action>
+  <action name="action_create3rd">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="icon">
+    <iconset resource="../resources.qrc">
+     <normaloff>:/fancy.png</normaloff>:/fancy.png</iconset>
+   </property>
+   <property name="text">
+    <string>&amp;3RD PARTY</string>
+   </property>
+   <property name="toolTip">
+    <string> 3rd party actions </string>
    </property>
   </action>
   <action name="action_resumevm">
