@@ -9,6 +9,8 @@
     <file alias="backup.png">icons/backup.png</file>
     <file alias="global-settings.png">icons/global-settings.png</file>
     <file alias="off.png">icons/on-icon/off.png</file>
+    <file alias="create_3rd.png">icons/create_3rd.png</file>
+    <file alias="fancy.png">icons/fancy.png</file>
     <file alias="outdated.png">icons/outdated.png</file>
     <file alias="to-be-outdated.png">icons/to-be-outdated.png</file>
     <file alias="update-recommended.png">icons/update-recommended.png</file>
@@ -51,5 +53,14 @@
     <file alias="showcpuload.png">icons/showcpuload.png</file>
     <file alias="mic.png">icons/mic.png</file>
     <file alias="restartvm.png">icons/restartvm.png</file>
+    <file alias="arch.png">icons/installations/arch.png</file>
+    <file alias="blackarch.png">icons/installations/blackarch.png</file>
+    <file alias="debian.png">icons/installations/debian.png</file>
+    <file alias="kali11.png">icons/installations/kali11.png</file>
+    <file alias="mint.png">icons/installations/mint.png</file>
+    <file alias="mirage-firewall.png">icons/installations/mirage-firewall.png</file>
+    <file alias="parrot.png">icons/installations/parrot.png</file>
+    <file alias="ubuntu.png">icons/installations/ubuntu.png</file>
+    <file alias="win10x64-ltsc-eval.png">icons/installations/win10x64-ltsc-eval.png</file>
   </qresource>
 </RCC>
