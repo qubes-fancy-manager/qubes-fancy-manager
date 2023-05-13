@@ -1,0 +1,27 @@
+#!/usr/bin/python3.8
+import subprocess
+import json
+import sys
+
+
+def append_system_libs():
+    # execute the "python3 -c 'import site; print(json.dumps(site.getsitepackages()))'" command and capture the output
+    result = subprocess.run(["python3", "-c", "import site, json; print(json.dumps(site.getsitepackages()))"],
+                            stdout=subprocess.PIPE)
+
+    # extract the output from the result and parse it as JSON
+    output = json.loads(result.stdout)
+
+    # append each path to sys.path
+    for path in output:
+        sys.path.append(path)
+
+
+# let's use all libraries from the client to ensure maximum compatibility
+append_system_libs()
+
+from qubesmanager import qube_manager
+
+if __name__ == '__main__':
+    sys.argv[0] = 'qubes-qube-manager'
+    qube_manager.main()
