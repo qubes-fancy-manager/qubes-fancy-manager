@@ -50,6 +50,7 @@ from . import global_settings
 from . import restore
 from . import backup
 from . import create_new_vm
+from . import create_worker
 from . import log_dialog
 from . import utils as manager_utils
 from . import common_threads
@@ -1291,6 +1292,14 @@ class VmManagerWindow(ui_qubemanager.Ui_VmManagerWindow, QMainWindow):
     def action_createvm_triggered(self):
         with common_threads.busy_cursor():
             create_window = create_new_vm.NewVmDlg(
+                    self.qt_app, self.qubes_app, self)
+        create_window.exec_()
+
+    # noinspection PyArgumentList
+    @pyqtSlot(name='on_action_create3rd_triggered')
+    def action_create3rd_triggered(self):
+        with common_threads.busy_cursor():
+            create_window = create_worker.NewWorkerDlg(
                     self.qt_app, self.qubes_app, self)
         create_window.exec_()
 
