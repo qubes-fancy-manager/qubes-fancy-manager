@@ -355,7 +355,7 @@ class FancyManager:
         """ + f"""
         qvm-run -p "{disposable_name}" "cd '$resources_dir' && gpg --import author.asc && git verify-commit \$(git rev-list --max-parents=0 HEAD)"
 
-        qvm-run -p --filter-escape-chars --no-color-output "$resources_qube" "cat '$resources_dir/qvm-create-windows-qube'" | sudo tee /usr/bin/qvm-create-windows-qube > /dev/null
+        qvm-run -p --filter-escape-chars --no-color-output "{disposable_name}" "cat '$resources_dir/qvm-create-windows-qube'" | sudo tee /usr/bin/qvm-create-windows-qube > /dev/null
 
         # Allow execution of script
         sudo chmod +x /usr/bin/qvm-create-windows-qube
